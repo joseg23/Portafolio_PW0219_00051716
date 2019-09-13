@@ -1,0 +1,21 @@
+$color-primario: red;
+$color-secundario: blue;
+
+@mixin set-dimensions($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+body{
+    @include set-dimensions(50%, 100vh);
+}
+
+.container{
+    background-color: $color-primario;
+    .btn{
+        background-color: $color-secundario; 
+    }
+    &:hover{
+        background-color: $color-secundario;
+    }
+}

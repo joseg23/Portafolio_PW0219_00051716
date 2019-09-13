@@ -1,0 +1,17 @@
+body {
+  width: 50%;
+  height: 100vh;
+}
+
+.container {
+  background-color: red;
+}
+
+.container .btn {
+  background-color: blue;
+}
+
+.container:hover {
+  background-color: blue;
+}
+/*# sourceMappingURL=style.css.map */
