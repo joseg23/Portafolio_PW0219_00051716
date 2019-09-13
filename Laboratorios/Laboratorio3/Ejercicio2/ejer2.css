@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-image: url(https://picsum.photos/id/182/200/200);
+    background-image: url(https://picsum.photos/id/188/200/200);
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -77,7 +77,7 @@ img:hover{
     display: grid;
     margin:5em auto;
     width: 80%;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(5, 2fr);
     grid-auto-rows:minmax(5em, 5em);
     grid-gap: 0em;
     grid-auto-flow: row dense;
