@@ -23,11 +23,9 @@ body {
     justify-content: space-between
 }
 
-/*Al principio lo separaba por comas y no me agarraba como tenia que ser sin embargo en
-en la imagen de como se debe de ver se ve que solo las letras cambian de color 
-en mi caso se sombrea de rojo*/
+/*Pues que era solo con color para que el menu se vea seleccionado de color rojo*/
 .header nav ul li a:hover{
-    background-color: red;
+    color: red;
 }
 
 .src-only {
@@ -100,8 +98,28 @@ p{
     text-decoration: none;
     font-size: 2.5em;
 }
+/*********Esta parte hace que el logo de twitter y github junto con
+la flecha se separen y agarren un tamanio adecuado sin embargo me falta poner bien
+los margenes adecuados**********/
+.fa-github{
+    margin-bottom: 40px;
+    margin: 17px;
+    padding: -3em;
+    font-size: 75px;
+}
 
+.fa-twitter{
+    margin-bottom: 40px;
+    margin: 17px;
+    padding: -3em;
+    font-size: 75px;
+}
 
+.fa-arrow-circle-down{
+    font-size: 60px;
+    color: #0AC693;
+}
+/**************************************************************************/
 .green-area {
     background-color: #0AC693; 
 }
