@@ -181,6 +181,13 @@ p{
     margin-top: 2em;
 }
 
+/*Llegar a separar el about y el contact gracias a grid solo falta dar las espacios adecuados*/
+.about > .container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -194,7 +201,7 @@ p{
 
 .bio-info p{
     font-size: 16px;
-    padding: 2em;
+    padding: 4em;
     text-align: left;
     line-height: 25px;
     letter-spacing: 2px;
