@@ -329,11 +329,11 @@ footer .social-links {
 
     .logo {
         width: 150px;
-        margin: 1.5em;
     }
 
     .show-desktop {
         display: block;
+        padding: 0;
     }
 
     .hide-desktop {
@@ -353,14 +353,26 @@ footer .social-links {
 
 
 
-    /*TODO: FALTA CSS */
+    
 } 
 
 @media only screen and (min-width: 1024px) {
+    /*No entiendo porque se me desconfigura cuando se supone que esta parte 
+    es de telefono, me afecta a la vista de pc*/
+   /* .about > .container{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(500px, 50%));
+        grid-gap: 8px;
+    } 
 
-       /*TODO: FALTA CSS */
+    .about .contact, .about .bio-info{
+        padding: 1.5em;
+        align-items: center;
+    }
 
-
+    .about .contact-form{
+        width: 75px;
+    }*/
 
 }
 
