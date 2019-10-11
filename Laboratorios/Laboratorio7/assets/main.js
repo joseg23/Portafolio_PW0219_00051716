@@ -20,7 +20,7 @@ function addStudent(carnet, schedule, late, tBody){
 window.onload=()=>{
     let submit_btn=document.querySelector("#submit_btn");
     let carnet_field=document.querySelector("#carnet_field");
-    let schudele_field=document.querySelector("#schudele_field");
+    let schudele_field=document.querySelector("#schedule_field");
     let late_switch=document.querySelector("#late_switch");
     let tBody=document.querySelector("#table_body");
 
