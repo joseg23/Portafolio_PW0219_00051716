@@ -1,15 +1,24 @@
 var idCounter=0;
+var rows=[];
 
 var parseLateSwitch=value =>{
     if(value){
         return "Late";
     }
     return "On time";
-}
+};
 
 function addStudent(carnet, schedule, late, tBody){
     let newRow=document.createElement("tr");
     let date=new Date();
+
+    rows.push({
+        id: idCounter,
+        carnet: carnet,
+        schedule: schedule,
+        late: late,
+    })
+
     newRow.innerHTML=`<td><b>${carnet}</b></td>
     <td>${schedule}</td>
     <td>${date.toLocaleString()}</td>
@@ -18,21 +27,42 @@ function addStudent(carnet, schedule, late, tBody){
     let cellContainer=document.createElement("td");
 
     let newBtn=document.createElement("button")
+
     newBtn.classList.add("btn");
     newBtn.classList.add("btn-danger");
     newBtn.innerText="Drop";
     newBtn.value=idCounter;
 
+    let cellConfirmar = document.createElement("td");
+    let inputConfirmar = document.createElement("input");
+
+    inputConfirmar.id=idCounter;
+    inputConfirmar.setAttribute("type","text");
+    inputConfirmar.setAttribute("maxlength","8");
+
+
+    newBtn.addEventListener("click",function(event){
+        var idElement = event.srcElement.value;
+        var trToDelete = document.querySelector(`button[value= '${idElement}' ]`).parentElement.parentElement;
+        var Confirm_carnet = document.querySelector(`input[id= '${idElement}' ]`);
+        var carnetConfirm = Confirm_carnet.value;
+
+        if(carnetConfirm === carnet){
+            tBody.removeChild(trToDelete);
+        }
+        rows.forEach((item,index)=>{
+            if(item.id == idElement){
+               rows.splice(index,1);
+            }
+        })
+    })
+
+
     cellContainer.appendChild(newBtn);
     newRow.appendChild(cellContainer);
 
-    newBtn.addEventListener("click", value=>{
-        let idElement=event.srcElement.value;
-
-        let elementNode=document.querySelector(`tr>td>button[value='${idElement}']`).parentElement.parentElement;
-
-        tBody.removeChild(elementNode);
-    });
+    cellConfirmar.appendChild(inputConfirmar);
+    newRow.appendChild(cellConfirmar);
 
     idCounter++;
 
